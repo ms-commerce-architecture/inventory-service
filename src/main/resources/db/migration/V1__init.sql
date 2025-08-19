@@ -1,6 +1,6 @@
 create table `t_inventory`(
     `inventory_id` bigint(20) not null AUTO_INCREMENT,
-    `product_id` varchar(255) unique not NULL,
+    `product_id`  VARCHAR(255) unique not NULL,
      `warehouse_id` int(11) not NULL,
     `available_quantity` Int not null DEFAULT 0,
     `reserved_quantity` Int not null  DEFAULT 0,
@@ -11,7 +11,7 @@ create table `t_inventory`(
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`inventory_id`)
-)
+);
 
 create table `t_inventory_movements`(
     `movement_id` BIGINT(20) AUTO_INCREMENT,
@@ -24,9 +24,9 @@ create table `t_inventory_movements`(
     `reason` TEXT   null ,
     `performed_by` VARCHAR(100) null,
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     primary key (`movement_id`)
-)
+);
 
 create Table `t_warehouses`(
     `warehouse_id` BIGINT(20) AUTO_INCREMENT ,
@@ -38,7 +38,7 @@ create Table `t_warehouses`(
     `contact_phone` VARCHAR(20) null,
     `status` ENUM('ACTIVE', 'INACTIVE') DEFAULT 'ACTIVE',
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     primary key (`warehouse_id`)
 
-)
+);

@@ -23,7 +23,7 @@ public class Inventory {
     @Column(name = "inventory_id")
     private BigInteger inventoryId;
 
-    @Column(name = "product_id", nullable = false, unique = true, length = 255)
+    @Column(name = "product_id", nullable = false, unique = true)
     private String productId;
 
     @Column(name = "warehouse_id", nullable = false)
